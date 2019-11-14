@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="327.0" style="-fx-background-color: #333645;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox alignment="CENTER_LEFT" layoutX="56.0" layoutY="83.0" prefHeight="362.0" prefWidth="216.0" spacing="40.0" style="-fx-background-color: #333645; -fx-border-color: #00b2d3; -fx-border-radius: 30px; -fx-border-width: 3;">
+         <children>
+            <Button fx:id="roomsButton" mnemonicParsing="false" onAction="#openRoomsWindows" prefHeight="22.0" prefWidth="210.0" style="-fx-background-color: #00A2D3;" text="Rooms">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="timeslotsButton" mnemonicParsing="false" onAction="#openTimeSlotsWindows" prefHeight="31.0" prefWidth="238.0" style="-fx-background-color: #00A2D3;" text="Time Slots">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="usersButton" mnemonicParsing="false" onAction="#openUsersWindows" prefHeight="31.0" prefWidth="220.0" style="-fx-background-color: #00A2D3;" text="Users">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="generateReportButton" mnemonicParsing="false" onAction="#openReportsWindows" prefHeight="22.0" prefWidth="210.0" style="-fx-background-color: #00A2D3;" text="Generate Reports">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </VBox>
+      <Label layoutX="25.0" layoutY="14.0" text="Admin App for Bookit" textFill="#f5e4e4">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

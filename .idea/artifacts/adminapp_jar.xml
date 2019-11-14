@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="adminapp:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/adminapp_jar</output-path>
+    <root id="archive" name="adminapp.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$USER_HOME$/Desktop/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="adminapp" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Libs/fontawesomefx-8.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Libs/jfoenix-8.0.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Libs/mysql-connector-java-5.1.47.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

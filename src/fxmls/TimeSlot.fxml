@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="381.0" style="-fx-background-color: #333645;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TimeSlotController">
+   <children>
+      <Button fx:id="addButton" layoutX="70.0" layoutY="304.0" mnemonicParsing="false" onMouseClicked="#AddButtonAction" prefHeight="31.0" prefWidth="242.0" style="-fx-border-color: #00a2d3; -fx-border-radius: 2;" text="Add">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Button>
+      <VBox layoutX="109.0" layoutY="14.0" prefHeight="252.0" prefWidth="148.0" spacing="15.0">
+         <children>
+            <Label alignment="BASELINE_CENTER" prefHeight="28.0" prefWidth="454.0" text="Select room" textAlignment="CENTER" textFill="#dddddd">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="roomChoicebox" prefWidth="150.0" />
+            <Label alignment="BASELINE_CENTER" prefHeight="6.0" prefWidth="382.0" text="Select Timeslot" textAlignment="CENTER" textFill="#dddddd">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="timeslotChoicebox" prefWidth="150.0" />
+            <Label alignment="BASELINE_CENTER" prefHeight="28.0" prefWidth="145.0" text="Select Day" textAlignment="CENTER" textFill="#dddddd">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="dayChoiceBox" prefHeight="31.0" prefWidth="160.0" />
+         </children>
+      </VBox>
+      <Button fx:id="deleteButton" layoutX="70.0" layoutY="351.0" mnemonicParsing="false" onMouseClicked="#deleteButtonAction" prefHeight="31.0" prefWidth="242.0" style="-fx-border-color: #00a2d3; -fx-border-radius: 2;" text="Delete">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

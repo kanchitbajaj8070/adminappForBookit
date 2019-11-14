@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clearSelection" prefHeight="653.0" prefWidth="553.0" style="-fx-background-color: #d2d3d5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UsersController">
+   <children>
+      <Button fx:id="addUserButton" layoutX="101.0" layoutY="168.0" mnemonicParsing="false" onMouseClicked="#addUserFunction" prefHeight="31.0" prefWidth="342.0" style="-fx-background-color: #00a2d3; -fx-border-color: #333645; -fx-border-width: 2;" text="Add  User">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Button>
+      <VBox layoutX="10.0" layoutY="11.0" prefHeight="61.0" prefWidth="528.0" spacing="15.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Label prefWidth="100.0" text="Name" />
+                  <JFXTextField fx:id="nameText" prefHeight="0.0" prefWidth="300.0" promptText="Enter first and last name here" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="414.0" spacing="50.0">
+               <children>
+                  <Label prefWidth="100.0" text="Username" />
+                  <JFXTextField fx:id="usernameText" prefHeight="0.0" prefWidth="300.0" promptText="Enter username here" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Label prefWidth="100.0" text="Email" />
+                  <JFXTextField fx:id="emailText" prefHeight="0.0" prefWidth="300.0" promptText="Enter email-Id here" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <StackPane layoutX="2.0" layoutY="262.0" prefHeight="390.0" prefWidth="553.0">
+         <children>
+            <TableView fx:id="usersTable" prefHeight="200.0" prefWidth="545.0">
+              <columns>
+                <TableColumn fx:id="nameCol" prefWidth="107.0" text="Name" />
+                <TableColumn fx:id="usernameCol" prefWidth="127.0" text="Username" />
+                  <TableColumn fx:id="passwordCol" prefWidth="162.0" text="Password" />
+                  <TableColumn fx:id="emailCol" prefWidth="156.0" text="Email" />
+              </columns>
+            </TableView>
+         </children>
+      </StackPane>
+      <Separator layoutX="-2.0" layoutY="211.0" prefHeight="0.0" prefWidth="547.0" />
+      <Label layoutX="10.0" layoutY="214.0" text="Current Users">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="deleteButton" layoutX="385.0" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#deleteUser" prefHeight="21.0" prefWidth="160.0" style="-fx-background-color: #00a2d3; -fx-border-color: #333645; -fx-border-width: 2;" text="Delete User">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
