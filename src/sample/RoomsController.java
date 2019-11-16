@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -36,7 +37,7 @@ public class RoomsController implements Initializable {
     private Button addButton;
 
     @FXML
-    private JFXTextField roomnameTextField;
+    private TextField roomnameTextField;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

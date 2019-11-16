@@ -7,33 +7,65 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="327.0" style="-fx-background-color: #333645;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="327.0" style="-fx-background-color: #34343D;" stylesheets="@../sample/css/style1.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <VBox alignment="CENTER_LEFT" layoutX="56.0" layoutY="83.0" prefHeight="362.0" prefWidth="216.0" spacing="40.0" style="-fx-background-color: #333645; -fx-border-color: #00b2d3; -fx-border-radius: 30px; -fx-border-width: 3;">
+      <VBox alignment="CENTER_LEFT" layoutX="40.0" layoutY="87.0" prefHeight="331.0" prefWidth="247.0" spacing="40.0" style="-fx-background-color: #34343D; -fx-border-color: #24242B; -fx-border-radius: 50PX; -fx-border-width: 3;" stylesheets="@../sample/css/style.css" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="87.0">
          <children>
-            <Button fx:id="roomsButton" mnemonicParsing="false" onAction="#openRoomsWindows" prefHeight="22.0" prefWidth="210.0" style="-fx-background-color: #00A2D3;" text="Rooms">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font></Button>
-            <Button fx:id="timeslotsButton" mnemonicParsing="false" onAction="#openTimeSlotsWindows" prefHeight="31.0" prefWidth="238.0" style="-fx-background-color: #00A2D3;" text="Time Slots">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font></Button>
-            <Button fx:id="usersButton" mnemonicParsing="false" onAction="#openUsersWindows" prefHeight="31.0" prefWidth="220.0" style="-fx-background-color: #00A2D3;" text="Users">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font></Button>
-            <Button fx:id="generateReportButton" mnemonicParsing="false" onAction="#openReportsWindows" prefHeight="22.0" prefWidth="210.0" style="-fx-background-color: #00A2D3;" text="Generate Reports">
+            <Button fx:id="roomsButton" mnemonicParsing="false" onAction="#openRoomsWindows" prefHeight="22.0" prefWidth="210.0" styleClass="login-button" stylesheets="@../sample/css/style.css" text="Rooms">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button fx:id="timeslotsButton" mnemonicParsing="false" onAction="#openTimeSlotsWindows" prefHeight="31.0" prefWidth="238.0" styleClass="login-button" stylesheets="@../sample/css/style.css" text="Time Slots">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button fx:id="usersButton" mnemonicParsing="false" onAction="#openUsersWindows" prefHeight="31.0" prefWidth="220.0" styleClass="login-button" stylesheets="@../sample/css/style.css" text="Users">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button fx:id="generateReportButton" mnemonicParsing="false" onAction="#openReportsWindows" prefHeight="22.0" prefWidth="210.0" styleClass="login-button" stylesheets="@../sample/css/style.css" text="Generate Reports">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
          </children>
          <padding>
-            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </VBox>
-      <Label layoutX="25.0" layoutY="14.0" text="Admin App for Bookit" textFill="#f5e4e4">
+      <Label layoutX="88.0" layoutY="40.0" text="Admin App " textFill="#f5e4e4">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="1.0" text="BookIT" textFill="#f5e4e4">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>

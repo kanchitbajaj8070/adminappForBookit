@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -33,10 +34,10 @@ DatabaseHelper handler= DatabaseHelper.getInstance();
     @FXML
     public void openRoomsWindows() {
         try {
-
             Stage primaryStage = new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("/fxmls/Rooms.fxml"));
-            primaryStage.setTitle("");
+            primaryStage.setTitle("Rooms");
+            primaryStage.initStyle(StageStyle.UTILITY);
             primaryStage.setScene(new Scene(root));
             primaryStage.setResizable(false);
             primaryStage.initModality(Modality.APPLICATION_MODAL);
@@ -49,8 +50,9 @@ DatabaseHelper handler= DatabaseHelper.getInstance();
     {
         Stage primaryStage= new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/fxmls/TimeSlot.fxml"));
-        primaryStage.setTitle("");
+        primaryStage.setTitle("TimeSlots");
         primaryStage.setResizable(false);
+        primaryStage.initStyle(StageStyle.UTILITY);
         primaryStage.setScene(new Scene(root));
         primaryStage.initModality(Modality.APPLICATION_MODAL);
         primaryStage.show();
@@ -60,7 +62,9 @@ DatabaseHelper handler= DatabaseHelper.getInstance();
         Stage primaryStage= new Stage();
         primaryStage.setResizable(false);
         Parent root = FXMLLoader.load(getClass().getResource("/fxmls/Users.fxml"));
-        primaryStage.setTitle("");
+        primaryStage.setTitle("Users");
+        primaryStage.initStyle(StageStyle.UTILITY);
+        primaryStage.initStyle(StageStyle.UTILITY);
         primaryStage.setScene(new Scene(root));
         primaryStage.initModality(Modality.APPLICATION_MODAL);
         primaryStage.show();
@@ -70,8 +74,9 @@ DatabaseHelper handler= DatabaseHelper.getInstance();
         Stage primaryStage= new Stage();
         primaryStage.setResizable(false);
         Parent root = FXMLLoader.load(getClass().getResource("/fxmls/Reports.fxml"));
-        primaryStage.setTitle("");
+        primaryStage.setTitle("Reports");
         primaryStage.setScene(new Scene(root));
+        primaryStage.initStyle(StageStyle.UTILITY);
         primaryStage.initModality(Modality.APPLICATION_MODAL);
         primaryStage.show();
     }
