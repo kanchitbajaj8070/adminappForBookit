@@ -60,7 +60,7 @@ public class UsersController implements Initializable {
 
     private void initUsersList() {
 
-        ArrayList<usersModel> list= handler.getInstance().getAllUsers();
+        ArrayList<usersModel> list= DatabaseHelper.getInstance().getAllUsers();
         usersList.addAll(list);
         usersTable.setItems(usersList);
     }
@@ -69,10 +69,10 @@ public class UsersController implements Initializable {
     {
         if(nameText.getText()!=null&&nameText.getText().isEmpty()==false&&usernameText.getText()!=null&&usernameText.getText().isEmpty()==false&&emailText.getText().isEmpty()==false&&emailText.getText()!=null)
         {
-            String a= nameText.getText().toString();
-            String b= usernameText.getText().toString();
-            String c=emailText.getText().toString();
-            handler.getInstance().addUser(a,b,c);
+            String a= nameText.getText();
+            String b= usernameText.getText();
+            String c= emailText.getText();
+            DatabaseHelper.getInstance().addUser(a,b,c);
             nameText.clear();
             emailText.clear();
             usernameText.clear();
@@ -100,7 +100,7 @@ public class UsersController implements Initializable {
 else{
 
             try {
-                int res = handler.getInstance().deleteUser(rowToDelete);
+                int res = DatabaseHelper.getInstance().deleteUser(rowToDelete);
                 if (res == 1) {
                     Platform.runLater(() -> {
                         usersTable.getItems().removeAll(rowToDelete);

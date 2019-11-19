@@ -52,7 +52,7 @@ public class RoomsController implements Initializable {
         roomsList.clear();
         try {
 
-            ArrayList<String> list = helper.getInstance().getAllRooms();
+            ArrayList<String> list = DatabaseHelper.getInstance().getAllRooms();
             for (int i = 0; i < list.size(); i++) {
                 roomsList.add(new RoomsModel(list.get(i)));
 
@@ -69,7 +69,7 @@ public class RoomsController implements Initializable {
 
         String s = roomnameTextField.getText();
         if (s != null && !s.isEmpty()) {
-            helper.getInstance().addRoom(s);
+            DatabaseHelper.getInstance().addRoom(s);
         } else
             alertMaker.showErrorMessage("", "Cant leave text field empty");
         roomsList.clear();
@@ -89,7 +89,7 @@ public class RoomsController implements Initializable {
         } else {
 
             try {
-                helper.getInstance().deleteRoom(rowToDelete.getRoomname());
+                DatabaseHelper.getInstance().deleteRoom(rowToDelete.getRoomname());
                 initialize(null, null);
             } catch (Exception e) {
                 e.printStackTrace();

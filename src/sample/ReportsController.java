@@ -26,7 +26,7 @@ public DatabaseHelper handler=null;
     public void initialize(URL location, ResourceBundle resources) {
         reportsCol.setCellValueFactory(new PropertyValueFactory<ReportsModel, String>("Report"));
         reportssList.clear();
-        reportssList.addAll(handler.getInstance().getAllReports());
+        reportssList.addAll(DatabaseHelper.getInstance().getAllReports());
         reportsTabel.setItems(reportssList);
     }
 }

@@ -109,12 +109,7 @@ public class alertMaker {
         alert.setHeaderText(header);
         alert.setContentText(content);
        alert.showAndWait().ifPresent(rs -> {
-           if(rs == ButtonType.OK) {
-                    ans=true;}
-           else
-           {
-               ans=false;
-           }
+           ans = rs == ButtonType.OK;
 
        });
 

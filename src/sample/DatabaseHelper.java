@@ -45,7 +45,7 @@ public class DatabaseHelper {
 
     public static void closeConnection() {
         try {
-            handler.getInstance().getConnection().close();
+            getInstance().getConnection().close();
         } catch (SQLException e) {
             alertMaker.showErrorMessage("Not able to close Db connection", "");
         }
@@ -56,7 +56,7 @@ public class DatabaseHelper {
         return conn;
     }
 
-    public ArrayList<String> getAllRooms() throws Exception {
+    public ArrayList<String> getAllRooms() {
         ArrayList<String> list = new ArrayList<String>();
         ResultSet rs = null;
         try {
@@ -87,7 +87,7 @@ public class DatabaseHelper {
     public void deleteRoom(String name) {
         try {
             String query = "delete from  bookingsystem.rooms where roomname=?";
-            PreparedStatement preparedStatement = handler.getInstance().getConnection().prepareStatement(query);
+            PreparedStatement preparedStatement = getInstance().getConnection().prepareStatement(query);
             preparedStatement.setString(1, name);
             int p = preparedStatement.executeUpdate();
             System.out.println("val p " + p);
@@ -103,7 +103,7 @@ public class DatabaseHelper {
     private void deletefromMainTable(String name) {
         try {
             String query = "delete from  bookingsystem.main where roomname=?";
-            PreparedStatement preparedStatement = handler.getInstance().getConnection().prepareStatement(query);
+            PreparedStatement preparedStatement = getInstance().getConnection().prepareStatement(query);
             preparedStatement.setString(1, name);
             int p = preparedStatement.executeUpdate();
             System.out.println("val p " + p);
@@ -118,7 +118,7 @@ public class DatabaseHelper {
     public void addRoom(String name) {
         try {
             String query = "Insert into bookingsystem.rooms values (?)";
-            PreparedStatement preparedStatement = handler.getInstance().getConnection().prepareStatement(query);
+            PreparedStatement preparedStatement = getInstance().getConnection().prepareStatement(query);
             preparedStatement.setString(1, name);
             int p = preparedStatement.executeUpdate();
             System.out.println("val p " + p);
@@ -140,7 +140,7 @@ public class DatabaseHelper {
             for (String k : days) {
                 for (int j : timeslots) {
                     String query = "Insert into bookingsystem.main values (?,?,?,?)";
-                    PreparedStatement preparedStatement = handler.getInstance().getConnection().prepareStatement(query);
+                    PreparedStatement preparedStatement = getInstance().getConnection().prepareStatement(query);
                     preparedStatement.setString(1, name);
                     preparedStatement.setInt(2, j);
                     preparedStatement.setInt(3, 0);
@@ -158,7 +158,7 @@ public class DatabaseHelper {
 
         try {
             String query = "Insert into bookingsystem.employees values (?,?,?,?)";
-            PreparedStatement preparedStatement = handler.getInstance().getConnection().prepareStatement(query);
+            PreparedStatement preparedStatement = getInstance().getConnection().prepareStatement(query);
             preparedStatement.setString(1, a);
             preparedStatement.setString(2, b);
             preparedStatement.setString(3, "test123");
@@ -175,7 +175,7 @@ public class DatabaseHelper {
 
     }
 
-    public ArrayList<String> getAllDays() throws Exception {
+    public ArrayList<String> getAllDays() {
         ArrayList<String> list = new ArrayList<String>();
         list.add("Monday");
         list.add("Tuesday");
@@ -189,7 +189,7 @@ public class DatabaseHelper {
 
     }
 
-    public ArrayList<String> getAllTimeSlots() throws Exception {
+    public ArrayList<String> getAllTimeSlots() {
         ArrayList<String> list = new ArrayList<String>();
         ResultSet rs = null;
         try {
@@ -220,7 +220,7 @@ public class DatabaseHelper {
         System.out.println("in add time slot" + a + (i) + c);
         try {
             String query = "update  bookingsystem.main set isAvailable =1 Where roomname=? and timeslot=? and day=?";
-            PreparedStatement preparedStatement = handler.getInstance().getConnection().prepareStatement(query);
+            PreparedStatement preparedStatement = getInstance().getConnection().prepareStatement(query);
             preparedStatement.setString(1, a);
             preparedStatement.setInt(2, i);
             preparedStatement.setString(3, c);
@@ -257,7 +257,7 @@ public class DatabaseHelper {
         int p = 0;
         try {
             String query = "delete from  bookingsystem.employees where username=?";
-            PreparedStatement preparedStatement = handler.getInstance().getConnection().prepareStatement(query);
+            PreparedStatement preparedStatement = getInstance().getConnection().prepareStatement(query);
             preparedStatement.setString(1, rowToDelete.getUsername());
             p = preparedStatement.executeUpdate();
             System.out.println("val p " + p);
@@ -272,7 +272,7 @@ public class DatabaseHelper {
         System.out.println("in add time slot" + a + (i) + c);
         try {
             String query = "update  bookingsystem.main set isAvailable =0 Where roomname=? and timeslot=? and day=?";
-            PreparedStatement preparedStatement = handler.getInstance().getConnection().prepareStatement(query);
+            PreparedStatement preparedStatement = getInstance().getConnection().prepareStatement(query);
             preparedStatement.setString(1, a);
             preparedStatement.setInt(2, i);
             preparedStatement.setString(3, c);
@@ -307,7 +307,7 @@ public class DatabaseHelper {
         try
         {
             String query = "Insert into bookingsystem.reports values (?,?)";
-            PreparedStatement preparedStatement = handler.getInstance().getConnection().prepareStatement(query);
+            PreparedStatement preparedStatement = getInstance().getConnection().prepareStatement(query);
             preparedStatement.setTimestamp(1, t);
             preparedStatement.setString(2,message);
             int p = preparedStatement.executeUpdate();

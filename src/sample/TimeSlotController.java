@@ -33,11 +33,11 @@ public DatabaseHelper handler=null;
         timeslotsList.clear();
         daysList.clear();
         try {
-            roomsList.addAll(handler.getInstance().getAllRooms());
+            roomsList.addAll(DatabaseHelper.getInstance().getAllRooms());
             roomChoicebox.setItems(roomsList);
-            timeslotsList.addAll(handler.getInstance().getAllTimeSlots());
+            timeslotsList.addAll(DatabaseHelper.getInstance().getAllTimeSlots());
             timeslotChoicebox.setItems(timeslotsList);
-            daysList.addAll(handler.getInstance().getAllDays());
+            daysList.addAll(DatabaseHelper.getInstance().getAllDays());
             dayChoiceBox.setItems(daysList);
         } catch (Exception e) {
 
@@ -66,7 +66,7 @@ public void AddButtonAction()
 
         c=c.substring(0,3);
         try {
-            handler.getInstance().addTimeslot(a,i,c);
+            DatabaseHelper.getInstance().addTimeslot(a,i,c);
         alertMaker.showInfoMessage("","Added timeslot succesfully","");
         timeslotChoicebox.setValue(null);
         roomChoicebox.setValue(null);
@@ -102,7 +102,7 @@ public void AddButtonAction()
 
             c=c.substring(0,3);
             try {
-                handler.getInstance().deleteTimeslot(a,i,c);
+                DatabaseHelper.getInstance().deleteTimeslot(a,i,c);
                 alertMaker.showInfoMessage("","Deletion timeslot succesfully","");
                 timeslotChoicebox.setValue(null);
                 roomChoicebox.setValue(null);
