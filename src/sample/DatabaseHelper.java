@@ -278,7 +278,7 @@ public class DatabaseHelper {
             preparedStatement.setString(3, c);
             int p = preparedStatement.executeUpdate();
             System.out.println("val p " + p);
-            addToReports(" timeslot no. "+ i+" of room "+a+" is deleted and dasy is"+c);
+            addToReports(" timeslot no. "+ i+" of room "+a+" is deleted and day is"+c);
         } catch (Exception e) {
 
             alertMaker.showErrorMessage("Failed in deleting questions of this Category", "");

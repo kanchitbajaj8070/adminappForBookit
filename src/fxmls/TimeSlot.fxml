@@ -7,37 +7,48 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="381.0" style="-fx-background-color: #333645;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TimeSlotController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #222329;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TimeSlotController">
    <children>
-      <Button fx:id="addButton" layoutX="70.0" layoutY="304.0" mnemonicParsing="false" onMouseClicked="#AddButtonAction" prefHeight="31.0" prefWidth="242.0" style="-fx-border-color: #00a2d3; -fx-border-radius: 2;" text="Add">
+      <Button fx:id="addButton" layoutX="371.0" layoutY="216.0" mnemonicParsing="false" onMouseClicked="#AddButtonAction" prefHeight="40.0" prefWidth="208.0" styleClass="login-button" stylesheets="@../sample/css/style.css" text="Add">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font></Button>
-      <VBox layoutX="109.0" layoutY="14.0" prefHeight="252.0" prefWidth="148.0" spacing="15.0">
+      <VBox alignment="CENTER" layoutX="1.0" layoutY="123.0" prefHeight="373.0" prefWidth="337.0" spacing="15.0">
          <children>
             <Label alignment="BASELINE_CENTER" prefHeight="28.0" prefWidth="454.0" text="Select room" textAlignment="CENTER" textFill="#dddddd">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Label>
-            <ChoiceBox fx:id="roomChoicebox" prefWidth="150.0" />
+            <ChoiceBox fx:id="roomChoicebox" prefHeight="31.0" prefWidth="300.0" />
             <Label alignment="BASELINE_CENTER" prefHeight="6.0" prefWidth="382.0" text="Select Timeslot" textAlignment="CENTER" textFill="#dddddd">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Label>
-            <ChoiceBox fx:id="timeslotChoicebox" prefWidth="150.0" />
+            <ChoiceBox fx:id="timeslotChoicebox" prefWidth="300.0" />
             <Label alignment="BASELINE_CENTER" prefHeight="28.0" prefWidth="145.0" text="Select Day" textAlignment="CENTER" textFill="#dddddd">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Label>
-            <ChoiceBox fx:id="dayChoiceBox" prefHeight="31.0" prefWidth="160.0" />
+            <ChoiceBox fx:id="dayChoiceBox" prefHeight="31.0" prefWidth="300.0" />
          </children>
       </VBox>
-      <Button fx:id="deleteButton" layoutX="70.0" layoutY="351.0" mnemonicParsing="false" onMouseClicked="#deleteButtonAction" prefHeight="31.0" prefWidth="242.0" style="-fx-border-color: #00a2d3; -fx-border-radius: 2;" text="Delete">
+      <Button fx:id="deleteButton" layoutX="371.0" layoutY="310.0" mnemonicParsing="false" onMouseClicked="#deleteButtonAction" prefHeight="40.0" prefWidth="208.0" styleClass="login-button" stylesheets="@../sample/css/style.css" text="Delete">
          <font>
             <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="6.0" prefHeight="42.0" prefWidth="600.0" text="Time slots Manager" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="72.0" prefHeight="51.0" prefWidth="600.0" text="Select Room , Timeslot of the room and Day from the drop down boxes&#10;below and click on add or delete to perform the required action" textAlignment="JUSTIFY" textFill="#a4a4a4" />
+      <Button fx:id="clearButton" layoutX="371.0" layoutY="404.0" mnemonicParsing="false" onAction="#clear" prefHeight="31.0" prefWidth="208.0" styleClass="login-button" stylesheets="@../sample/css/style.css" text="Clear entries">
+         <font>
+            <Font name="System Bold" size="15.0" />
          </font>
       </Button>
    </children>

@@ -91,10 +91,7 @@ public void AddButtonAction()
         if(a==null||b==null||c==null)
         {
             alertMaker.showErrorMessage("","No entries can be empty");
-            alertMaker.showInfoMessage("","Deletion timeslot succesfully","");
-            timeslotChoicebox.setValue(null);
-            roomChoicebox.setValue(null);
-            dayChoiceBox.setValue(null);
+
         }
         else
         {
@@ -106,6 +103,10 @@ public void AddButtonAction()
             c=c.substring(0,3);
             try {
                 handler.getInstance().deleteTimeslot(a,i,c);
+                alertMaker.showInfoMessage("","Deletion timeslot succesfully","");
+                timeslotChoicebox.setValue(null);
+                roomChoicebox.setValue(null);
+                dayChoiceBox.setValue(null);
             }
             catch (Exception e)
             {
@@ -116,4 +117,12 @@ public void AddButtonAction()
         }
     }
 
+    @FXML
+    private Button clearButton;
+    @FXML
+    void clear() {
+        timeslotChoicebox.setValue(null);
+        roomChoicebox.setValue(null);
+        dayChoiceBox.setValue(null);
+    }
 }

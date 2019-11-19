@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clearSelection" prefHeight="724.0" prefWidth="597.0" style="-fx-background-color: #d2d3d5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UsersController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clearSelection" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #d2d3d5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UsersController">
    <children>
       <Button fx:id="addUserButton" layoutX="223.0" layoutY="160.0" mnemonicParsing="false" onMouseClicked="#addUserFunction" prefHeight="33.0" prefWidth="188.0" styleClass="login-button" stylesheets="@../sample/css/style.css" text="Add  User">
          <font>
@@ -40,14 +40,14 @@
             </HBox>
          </children>
       </VBox>
-      <StackPane layoutY="320.0" prefHeight="390.0" prefWidth="597.0" style="-fx-background-color: #34343D;">
+      <StackPane layoutY="271.0" prefHeight="327.0" prefWidth="600.0" style="-fx-background-color: #34343D;">
          <children>
-            <TableView fx:id="usersTable" prefHeight="451.0" prefWidth="597.0" stylesheets="@../sample/css/style.css">
+            <TableView fx:id="usersTable" prefHeight="367.0" prefWidth="588.0" stylesheets="@../sample/css/style.css">
               <columns>
                 <TableColumn fx:id="nameCol" prefWidth="107.0" text="Name" />
                 <TableColumn fx:id="usernameCol" prefWidth="127.0" text="Username" />
                   <TableColumn fx:id="passwordCol" prefWidth="162.0" text="Password" />
-                  <TableColumn fx:id="emailCol" prefWidth="200.0" text="Email" />
+                  <TableColumn fx:id="emailCol" prefWidth="203.0" text="Email" />
               </columns>
             </TableView>
          </children>
@@ -58,7 +58,7 @@
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Label>
-      <Button fx:id="deleteButton" layoutX="440.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#deleteUser" prefHeight="33.0" prefWidth="136.0" styleClass="login-button" stylesheets="@../sample/css/style.css" text="Delete User">
+      <Button fx:id="deleteButton" layoutX="444.0" layoutY="229.0" mnemonicParsing="false" onMouseClicked="#deleteUser" prefHeight="33.0" prefWidth="136.0" styleClass="login-button" stylesheets="@../sample/css/style.css" text="Delete User">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font></Button>

@@ -9,20 +9,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clearSelection" prefHeight="515.0" prefWidth="600.0" style="-fx-background-color: #34343D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RoomsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clearSelection" prefHeight="600.0" prefWidth="616.0" style="-fx-background-color: #34343D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RoomsController">
    <children>
-      <TableView fx:id="roomsTable" layoutX="2.0" layoutY="206.0" prefHeight="295.0" prefWidth="600.0" stylesheets="@../sample/css/style.css">
+      <TableView fx:id="roomsTable" layoutX="2.0" layoutY="206.0" prefHeight="387.0" prefWidth="600.0" stylesheets="@../sample/css/style.css">
         <columns>
           <TableColumn fx:id="roomnameCol" prefWidth="599.0" text="Rooms" />
         </columns>
       </TableView>
-      <Button fx:id="deleteButton" layoutX="481.0" layoutY="156.0" mnemonicParsing="false" onMouseClicked="#deleteRoom" prefHeight="33.0" prefWidth="98.0" styleClass="login-button" stylesheets="@../sample/css/style.css" text="Delete" />
-      <Label layoutX="208.0" layoutY="7.0" prefHeight="21.0" prefWidth="147.0" text="Add new rooms" textFill="#00c925">
+      <Button fx:id="deleteButton" layoutX="481.0" layoutY="156.0" mnemonicParsing="false" onMouseClicked="#deleteRoom" prefHeight="33.0" prefWidth="98.0" styleClass="login-button" stylesheets="@../sample/css/style.css" text="Delete">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Button>
+      <Label layoutX="215.0" layoutY="7.0" prefHeight="27.0" prefWidth="162.0" text="Add new rooms" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="addButton" layoutX="259.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#addRoom" prefHeight="33.0" prefWidth="82.0" styleClass="login-button" stylesheets="@../sample/css/style.css" text="Add" />
+      <Button fx:id="addButton" layoutX="259.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#addRoom" prefHeight="33.0" prefWidth="82.0" styleClass="login-button" stylesheets="@../sample/css/style.css" text="Add">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Button>
       <Separator layoutY="134.0" prefHeight="5.0" prefWidth="600.0" />
       <Label layoutX="14.0" layoutY="146.0" prefHeight="21.0" prefWidth="135.0" text="Current Rooms" textFill="WHITE">
          <font>
