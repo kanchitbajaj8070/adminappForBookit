@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Tab?>
+
+<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" style="-fx-background-color: #222329;" stylesheets="@../sample/css/tabpane.css" tabMinWidth="145.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FirstWindowController">
+   <tabs>
+      <Tab fx:id="roomsTab" style="-fx-background-color: #222329;" text="Rooms" />
+      <Tab fx:id="usersTab" style="-fx-background-color: #222329;" text="Users" />
+      <Tab fx:id="timeslotsTab" style="-fx-background-color: #222329;" text="Timeslots" />
+      <Tab fx:id="reportsTab" onSelectionChanged="#fun" style="-fx-background-color: #222329;" text="Reports" />
+   </tabs>
+</JFXTabPane>
