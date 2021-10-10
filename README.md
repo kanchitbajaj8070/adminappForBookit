@@ -9,7 +9,7 @@ HOME
 
 ADD NEW ROOMS
 
-![NEW ROOMS PAGE ](https://github.com/kanchitbajaj8070/adminappForBookit/blob/master/screenshots/ADDNEWROOM.PNG)
+![NEW ROOMS PAGE ](https://github.com/kanchitbajaj8070/adminappForBookit/blob/master/screenshots/ADDROOM.PNG)
 
 ADD NEW USERS 
 
