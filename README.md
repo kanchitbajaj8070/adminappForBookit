@@ -3,25 +3,23 @@
 
 SCREENSHOTS
 
-HOME
+**HOME**
 
 ![HOME PAGE](https://github.com/kanchitbajaj8070/adminappForBookit/blob/master/screenshots/HOME.PNG)
 
-ADD NEW ROOMS
+**ADD NEW ROOMS**
 
 ![NEW ROOMS PAGE ](https://github.com/kanchitbajaj8070/adminappForBookit/blob/master/screenshots/ADDROOM.PNG)
 
-ADD NEW USERS 
+**ADD NEW USERS** 
 
 ![NEW USERS PAGE ](https://github.com/kanchitbajaj8070/adminappForBookit/blob/master/screenshots/ADDNEWUSER.PNG)
 
 
-ADD NEW TIMESLOTS
+**ADD NEW TIMESLOTS**
 
 ![TIMESLOTS PAGE ](https://github.com/kanchitbajaj8070/adminappForBookit/blob/master/screenshots/TIMESLOTS.PNG)
 
-
-
-SEE REPORTS 
+**SEE REPORTS**
 
 ![REPORTS ](https://github.com/kanchitbajaj8070/adminappForBookit/blob/master/screenshots/REPORTS.PNG)
